@@ -1,7 +1,7 @@
 <p align="center">
     <img src='assets/luna-shadow.png' width='128' height='128'/>
 </p>
-<h2 align="center">Luna</h2>
+<h3 align="center">Luna</h3>
 <p align="center">
 A CSS Front-end Framework
 </p>
