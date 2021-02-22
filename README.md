@@ -1,5 +1,7 @@
 <p align="center">
+  <a href='https://andromeda08.github.io/luna/'>
     <img src='assets/luna-shadow.png' width='128' height='128'/>
+  </a>
 </p>
 <h3 align="center">Luna</h3>
 <p align="center">
@@ -16,7 +18,7 @@ You have a few options:
 - Clone this repository: `git clone https://github.com/Andromeda08/Luna.git`
 
 ## Documentation
-Check out the **Using Luna page** for information about the framework and what can it do.
+- [Docs](https://andromeda08.github.io/luna/docs/docs.html)
 
 ## About
 - Written with less.js
