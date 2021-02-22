@@ -21,4 +21,5 @@ Check out the **Using Luna page** for information about the framework and what c
 ## About
 - Written with less.js
 - Contains Font Awesome 4.7.0 and Bootstrap Icons
+- Google Fonts: Nunito, Roboto, Roboto Mono, Montserrat, Oxygen
 - Uses the color palette of Tailwind 2.0
