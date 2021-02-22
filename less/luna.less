@@ -21,11 +21,15 @@ html, body, h1, h2, h3, h4, h6, h6, p { margin: 0; padding: 0; }
 // Base Styles
 html { scroll-behavior: smooth; }
 body {
-    font-family: @main-font;
-    font-size: #font-size[sm];
-    font-weight: 400;
-    line-height: 1.5;
-    -webkit-tap-highlight-color: transparent;
+  height: 100%;
+  font-family: @main-font !important;
+  font-size: #font-size[sm];
+  font-weight: 400;
+  line-height: 1.5;
+  -webkit-tap-highlight-color: transparent;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 // Chrome
 input:focus, textarea:focus, select:focus{
@@ -55,7 +59,10 @@ input:focus, textarea:focus, select:focus{
 .flex-col { flex-direction: column; }
 .justify-content-center { justify-content: center; }
 .align-items-center { align-items: center; }
+.flex-g1 { gap: 1rem; }
 .flex-g2 { gap: 2rem; }
+.flex-g3 { gap: 3rem; }
+.flex-g4 { gap: 4rem; }
 // Layout
 .flex-center {
   .flex;
@@ -74,6 +81,36 @@ input:focus, textarea:focus, select:focus{
 .flex-split > * {
   flex-basis: 100%;
 }
+// Flex Grid Layout
+.flex-grid {
+  .flex;
+  .flex-col;
+  .flex-wrap;
+}
+.fg-row-container {
+  .flex;
+  .align-items-center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.fg-row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fg-col {
+  .flex-center;
+  flex-direction: column;
+  width: auto;
+}
+.fg-col-container {
+  .flex;
+  .align-items-center;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+.fg-col-container > * { flex-basis: 100%; }
 // Margin Classes
 .ma-l-sm { margin-left: #font-size[sm]; }
 .ma-l-md { margin-left: #font-size[md]; }
@@ -160,6 +197,9 @@ input:focus, textarea:focus, select:focus{
 }
 //* Docs
 .docs { background: #gray[50]; }
+.docs .fa-chevron-right {
+  transition: all ease-in-out 150ms;
+}
 .docs-container {
   padding: 0;
   padding-inline: 8rem;
@@ -192,6 +232,7 @@ input:focus, textarea:focus, select:focus{
   background: transparent;
   display: block;
   width: 100%;
+  font-family: 'Nunito', sans-serif;
   font-weight: 600;
   font-size: 1rem;
   color: #gray[700];
@@ -238,6 +279,7 @@ input:focus, textarea:focus, select:focus{
 }
 .docs-examples { .docs-code; }
 .docs-examples > * { margin-inline: 0.5rem; }
+.docs .fa-chevron-right { margin-right: 0.1rem; }
 // Footer
 footer { background: #gray[100]; }
 footer ul { list-style: none; }
@@ -325,7 +367,7 @@ footer a {
   font-weight: 700;
   line-height: 1;
   text-align: center;
-  vertical-align: baseline;
+  vertical-align: middle;
   border-radius: 0.25rem;
   color: white;
 }
@@ -370,6 +412,8 @@ h6, .h6 { font-size: 1rem; }
 .lg { font-size: #font-size[lg]; }
 .xl { font-size: #font-size[xl]; }
 .xxl { font-size: #font-size[xxl]; }
+// Clip paths
+.circle-clip { clip-path: circle(50% at 50% 50%); }
 // Luna Theme
 body.luna {
   background: linear-gradient(165deg, rgba(224,216,255,0.15) 50%, rgba(255,255,255,1) 50%);

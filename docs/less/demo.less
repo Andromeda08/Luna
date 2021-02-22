@@ -1,0 +1,17 @@
+//* Demo Style for Flex Layout
+.border-big {
+  //border: 2px solid #18181b;
+  border-radius: 0.25rem;
+  background: #e4e4e7;
+}
+.border-small {
+  border: 2px dashed #463879;
+  border-radius: 0.25rem;
+}
+.docs-examples {
+  & > .flex-grid {
+    & > .fg-row, .fg-row-container, .fg-col-container { .border-big; }
+    & > .fg-col-container > .fg-col { .border-small; }
+    & > .fg-col-container > .fg-row-container > .fg-row { .border-small; }
+  }
+}

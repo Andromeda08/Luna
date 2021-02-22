@@ -431,11 +431,15 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: 'Nunito', sans-serif;
+  height: 100%;
+  font-family: 'Nunito', sans-serif !important;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
   -webkit-tap-highlight-color: transparent;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 input:focus,
 textarea:focus,
@@ -478,8 +482,17 @@ select:focus {
 .align-items-center {
   align-items: center;
 }
+.flex-g1 {
+  gap: 1rem;
+}
 .flex-g2 {
   gap: 2rem;
+}
+.flex-g3 {
+  gap: 3rem;
+}
+.flex-g4 {
+  gap: 4rem;
 }
 .flex-center {
   display: flex;
@@ -496,6 +509,39 @@ select:focus {
   gap: 1rem;
 }
 .flex-split > * {
+  flex-basis: 100%;
+}
+.flex-grid {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.fg-row-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.fg-row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fg-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: auto;
+}
+.fg-col-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+.fg-col-container > * {
   flex-basis: 100%;
 }
 .ma-l-sm {
@@ -667,6 +713,9 @@ select:focus {
 .docs {
   background: #fafafa;
 }
+.docs .fa-chevron-right {
+  transition: all ease-in-out 150ms;
+}
 .docs-container {
   padding: 0;
   padding-inline: 8rem;
@@ -707,6 +756,7 @@ select:focus {
   background: transparent;
   display: block;
   width: 100%;
+  font-family: 'Nunito', sans-serif;
   font-weight: 600;
   font-size: 1rem;
   color: #3f3f46;
@@ -766,6 +816,9 @@ select:focus {
 }
 .docs-examples > * {
   margin-inline: 0.5rem;
+}
+.docs .fa-chevron-right {
+  margin-right: 0.1rem;
 }
 footer {
   background: #f4f4f5;
@@ -861,7 +914,7 @@ footer a {
   font-weight: 700;
   line-height: 1;
   text-align: center;
-  vertical-align: baseline;
+  vertical-align: middle;
   border-radius: 0.25rem;
   color: white;
 }
@@ -941,6 +994,9 @@ h6,
 }
 .xxl {
   font-size: 1.8rem;
+}
+.circle-clip {
+  clip-path: circle(50% at 50% 50%);
 }
 body.luna {
   background: linear-gradient(165deg, rgba(224, 216, 255, 0.15) 50%, #ffffff 50%);

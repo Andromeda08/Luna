@@ -1,0 +1,22 @@
+.border-big {
+  border-radius: 0.25rem;
+  background: #e4e4e7;
+}
+.border-small {
+  border: 2px dashed #463879;
+  border-radius: 0.25rem;
+}
+.docs-examples > .flex-grid > .fg-row,
+.docs-examples > .flex-grid .fg-row-container,
+.docs-examples > .flex-grid .fg-col-container {
+  border-radius: 0.25rem;
+  background: #e4e4e7;
+}
+.docs-examples > .flex-grid > .fg-col-container > .fg-col {
+  border: 2px dashed #463879;
+  border-radius: 0.25rem;
+}
+.docs-examples > .flex-grid > .fg-col-container > .fg-row-container > .fg-row {
+  border: 2px dashed #463879;
+  border-radius: 0.25rem;
+}
