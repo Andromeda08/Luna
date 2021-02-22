@@ -1,0 +1,739 @@
+/*
+ * Luna Front-end Framework
+ ~ Author: Andromeda08
+ */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css');
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/*
+ * Included Fonts
+*/
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/nunito/v16/XRXW3I6Li01BKofA-sekZg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/nunito/v16/XRXW3I6Li01BKofAnsSkZg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/nunito/v16/XRXV3I6Li01BKof4Mg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/nunito/v16/XRXW3I6Li01BKofA6sKkZg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/nunito/v16/XRXW3I6Li01BKofAjsOkZg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/nunito/v16/XRXW3I6Li01BKofAksCkZg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/nunito/v16/XRXW3I6Li01BKofAtsGkZg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v20/KFOkCnqEu92Fr1MmgWxP.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5vAw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Me5Q.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmEU9vAw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlvAw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmYUtvAw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/robotomono/v13/L0xuDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vuPQw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/robotomono/v13/L0xuDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_XvqPQw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/robotomono/v13/L0xuDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_gPqPQw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/robotomono/v13/L0xuDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vqPQw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/robotomono/v13/L0xuDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_7PqPQw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/robotomono/v13/L0xuDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_AP2PQw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/robotomono/v13/L0xuDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_Of2PQw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTUQjIg1_i6t8kCHKm45_Qphzg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_aZA7g4.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_cJD7g4.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm45xW4.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_ZpC7g4.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_bZF7g4.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_dJE7g4.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_c5H7g4.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_epG7g4.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Oxygen';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oxygen/v10/2sDcZG1Wl4LcnbuCJW8Dbw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Oxygen';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oxygen/v10/2sDfZG1Wl4Lcnbu6iQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Oxygen';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oxygen/v10/2sDcZG1Wl4LcnbuCNWgDbw.ttf) format('truetype');
+}
+/*
+ * Colors, Palette from Tailwind 2.0
+ */
+/* Luna Syntax Highlighter */
+.tag {
+  color: #1e3a8a;
+}
+.tag-name {
+  color: #71717a;
+}
+.attr {
+  color: #f87171;
+}
+.attr-value {
+  color: #c084fc;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h6,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.container {
+  padding-block: 3rem;
+}
+.container-p2 {
+  padding-block: 3rem;
+  margin-inline: 2rem;
+}
+.container-p4 {
+  padding-block: 3rem;
+  margin-inline: 4rem;
+}
+.container-p8 {
+  padding-block: 3rem;
+  margin-inline: 8rem;
+}
+.flex {
+  display: flex;
+}
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-row {
+  flex-direction: row;
+}
+.flex-col {
+  flex-direction: column;
+}
+.justify-content-center {
+  justify-content: center;
+}
+.align-items-center {
+  align-items: center;
+}
+.flex-g2 {
+  gap: 2rem;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-middle {
+  display: flex;
+  justify-content: center;
+}
+.flex-split {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.flex-split > * {
+  flex-basis: 100%;
+}
+.ma-l-sm {
+  margin-left: 1rem;
+}
+.ma-l-md {
+  margin-left: 1.25rem;
+}
+.ma-l-lg {
+  margin-left: 1.4rem;
+}
+.ma-l-xl {
+  margin-left: 1.6rem;
+}
+.ma-l-xxl {
+  margin-left: 1.8rem;
+}
+.ma-l-a {
+  margin-left: auto;
+}
+.ma-r-sm {
+  margin-right: 1rem;
+}
+.ma-r-md {
+  margin-right: 1.25rem;
+}
+.ma-r-lg {
+  margin-right: 1.4rem;
+}
+.ma-r-xl {
+  margin-right: 1.6rem;
+}
+.ma-r-xxl {
+  margin-right: 1.8rem;
+}
+.ma-r-a {
+  margin-right: auto;
+}
+.ma-a {
+  margin-inline: auto;
+}
+.muted {
+  color: #71717a;
+}
+.no-decoration {
+  text-decoration: none !important;
+}
+.text-center {
+  text-align: center;
+}
+.lh-sm {
+  line-height: 1;
+}
+.lh-md {
+  line-height: 1.5;
+}
+.lh-lg {
+  line-height: 2;
+}
+.luna-navbar {
+  background: #6752b3;
+}
+.navbar {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.nav-container {
+  width: 100%;
+  padding-block: 0.75rem;
+  padding-inline: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-container-p2 {
+  width: 100%;
+  padding-block: 0.75rem;
+  padding-inline: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 2rem;
+}
+.nav-container-p4 {
+  width: 100%;
+  padding-block: 0.75rem;
+  padding-inline: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 4rem;
+}
+.nav-container-p8 {
+  width: 100%;
+  padding-block: 0.75rem;
+  padding-inline: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 8rem;
+}
+.navbar-collapse {
+  width: 100%;
+  display: flex;
+  flex-grow: 1;
+  flex-basis: auto;
+  align-items: center;
+}
+.navbar-nav {
+  display: flex;
+  list-style: none;
+}
+.navbar .nav-item {
+  display: inline-block;
+  position: relative;
+  padding-inline: 0.5rem;
+  padding-block: 0.25rem;
+}
+.navbar .nav-link {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  vertical-align: middle;
+}
+.navbar .nav-link:hover {
+  color: #ffffff;
+}
+.navbar .active {
+  color: #fff !important;
+  font-weight: 600;
+}
+.navbar i {
+  font-size: 1.25rem;
+}
+.navbar .navbar-logo {
+  margin-inline: 0.5rem;
+}
+footer {
+  background: #f4f4f5;
+}
+footer ul {
+  list-style: none;
+}
+footer li {
+  display: inline-block;
+}
+footer p {
+  color: #71717a;
+  font-size: 0.75rem;
+}
+footer a {
+  margin-right: 1rem;
+  color: #27272a;
+}
+.btn {
+  display: inline-block;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  padding: 0.35rem 0.75rem;
+}
+.btn-lg {
+  padding: 0.5rem 1rem;
+  font-size: 1.4rem;
+}
+.btn-primary {
+  color: white;
+  background: #6752b3;
+  border: 1px solid #6752b3;
+  font-weight: 500;
+  transition: ease-in-out 150ms;
+}
+.btn-download {
+  color: #a1a1aa;
+  border: 1px solid #a1a1aa;
+  font-weight: 500;
+  transition: ease-in-out 150ms;
+}
+.btn-download:hover {
+  background: #a1a1aa;
+  color: #fff;
+}
+.btn-luna-download {
+  color: #f6e06e;
+  border: 1px solid #f6e06e;
+  border-radius: 0.25rem;
+  font-weight: 600;
+  transition: ease-in-out 150ms;
+}
+.btn-luna-download:hover {
+  background: #f6e06e;
+  color: #6752b3;
+}
+div.code {
+  width: fit-content;
+  height: fit-content;
+  padding-inline: 1.25rem;
+  padding-block: 0.75rem;
+  margin-block: 0.25rem;
+  background: #f4f4f5;
+  border: 1px solid transparent;
+  border-radius: 12px;
+}
+div.code .term {
+  font-weight: 700;
+  color: #1e40af;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0.25rem;
+}
+h1,
+.h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+h2,
+.h2 {
+  font-size: 2rem;
+}
+h3,
+.h3 {
+  font-size: 1.75rem;
+}
+h4,
+.h4 {
+  font-size: 1.5rem;
+}
+h5,
+.h5 {
+  font-size: 1.25rem;
+}
+h6,
+.h6 {
+  font-size: 1rem;
+}
+.sm {
+  font-size: 1rem;
+}
+.md {
+  font-size: 1.25rem;
+}
+.lg {
+  font-size: 1.4rem;
+}
+.xl {
+  font-size: 1.6rem;
+}
+.xxl {
+  font-size: 1.8rem;
+}
+body {
+  background: linear-gradient(165deg, rgba(224, 216, 255, 0.15) 50%, #ffffff 50%);
+  background-repeat: no-repeat;
+}
+main.luna {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(70vh - 65px);
+}
+p.luna {
+  font-weight: 800;
+  font-size: 3.5rem;
+}
+img.moon {
+  width: 10rem;
+  height: 10rem;
+}
+main div {
+  padding-block: 0.5rem;
+}

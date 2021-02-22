@@ -1,21 +1,261 @@
 /*
- * Luna UI Library Stylesheet
+ * Luna Front-end Framework
  ~ Author: Andromeda08
  */
 
-//Inlude other .less files
-@import './_reset.less';
-@import './_fonts.less';
-@import './_colors.less';
+// Inlude other .less files
+@import '_reset';
+@import '_fonts';
+@import '_typography';
+@import '_colors';
+@import '_syntax';
 
-//Settings
-
-//Themes
-
-//Defaults
-*, *::before, *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+// Theme
+#theme-colors() {
+  luna: #6752b3;
+  luna-yellow: #f6e06e;
 }
-//Styles
+// Settings
+@main-font: 'Nunito', sans-serif;
+@code-font: 'Roboto Mono', monospace;
+// Defaults
+*, *::before, *::after { box-sizing: border-box; }
+html, body, h1, h2, h3, h4, h6, h6, p { margin: 0; padding: 0; }
+// Base Styles
+body {
+    font-family: @main-font;
+    font-size: #font-size[sm];
+    font-weight: 400;
+    line-height: 1.5;
+}
+//code { font-family: @code-font; }
+// Layout
+.container {
+  padding-block: 3rem;
+}
+.container-p2 {
+  .container;
+  margin-inline: 2rem;
+}
+.container-p4 {
+  .container;
+  margin-inline: 4rem;
+}
+.container-p8 {
+  .container;
+  margin-inline: 8rem;
+}
+// Flex
+.flex { display: flex; }
+.flex-nowrap { flex-wrap: nowrap; }
+.flex-wrap { flex-wrap: wrap; }
+.flex-row { flex-direction: row; }
+.flex-col { flex-direction: column; }
+.justify-content-center { justify-content: center; }
+.align-items-center { align-items: center; }
+.flex-g2 { gap: 2rem; }
+// Layout
+.flex-center {
+  .flex;
+  .justify-content-center;
+  .align-items-center;
+}
+.flex-middle {
+  .flex;
+  .justify-content-center;
+}
+.flex-split {
+  .flex;
+  .flex-row;
+  gap: 1rem;
+}
+.flex-split > * {
+  flex-basis: 100%;
+}
+// Margin Classes
+.ma-l-sm { margin-left: #font-size[sm]; }
+.ma-l-md { margin-left: #font-size[md]; }
+.ma-l-lg { margin-left: #font-size[lg]; }
+.ma-l-xl { margin-left: #font-size[xl]; }
+.ma-l-xxl { margin-left: #font-size[xxl]; }
+.ma-l-a { margin-left: auto; }
+.ma-r-sm { margin-right: #font-size[sm]; }
+.ma-r-md { margin-right: #font-size[md]; }
+.ma-r-lg { margin-right: #font-size[lg]; }
+.ma-r-xl { margin-right: #font-size[xl]; }
+.ma-r-xxl { margin-right: #font-size[xxl]; }
+.ma-r-a { margin-right: auto; }
+.ma-a { margin-inline: auto; }
+// Text Classes
+.muted { color: #gray[500]; }
+.no-decoration { text-decoration: none !important;}
+.text-center { text-align: center; }
+.lh-sm { line-height: 1; }
+.lh-md { line-height: 1.5; }
+.lh-lg { line-height: 2; }
+// Navigation
+.luna-navbar {
+  background: #theme-colors[luna];
+}
+.navbar {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.nav-container {
+  width: 100%;
+  padding-block: 0.75rem;
+  padding-inline: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-container-p2 { .nav-container; padding-inline: 2rem; }
+.nav-container-p4 { .nav-container; padding-inline: 4rem; }
+.nav-container-p8 { .nav-container; padding-inline: 8rem; }
+.navbar-collapse {
+  width: 100%;
+  display: flex;
+  flex-grow: 1;
+  flex-basis: auto;
+  align-items: center;
+}
+.navbar-nav {
+  display: flex;
+  list-style: none;
+}
+.navbar .nav-item {
+  display: inline-block;
+  position: relative;
+  padding-inline: 0.5rem;
+  padding-block: 0.25rem;
+}
+.navbar .nav-link {
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  vertical-align: middle;
+}
+.navbar .nav-link:hover {
+  color: #basic[white];
+}
+.navbar .active {
+  color: #fff !important;
+  font-weight: 600;
+}
+.navbar i {
+  font-size: #font-size[md];
+}
+.navbar .navbar-logo {
+  margin-inline: 0.5rem;
+}
+// Footer
+footer {
+  background: #gray[100];
+}
+footer ul { list-style: none; }
+footer li { display: inline-block; }
+footer p {
+  .muted;
+  font-size: #font-size[tn];
+}
+footer a {
+  .ma-r-sm;
+  color: #gray[800];
+}
+// Buttons
+.btn {
+  display: inline-block;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  padding: 0.35rem 0.75rem;
+}
+.btn-lg {
+  padding: 0.5rem 1rem;
+  font-size: #font-size[lg];
+}
+.btn-primary {
+  color: white;
+  background: #theme-colors[luna];
+  border: 1px solid #theme-colors[luna];
+  font-weight: 500;
+  transition: ease-in-out 150ms;
+}
+.btn-download {
+  color: #gray[400];
+  border: 1px solid #gray[400];
+  font-weight: 500;
+  transition: ease-in-out 150ms;
+}
+.btn-download:hover {
+  background: #gray[400];
+  color: #fff;
+}
+.btn-luna-download {
+  color: #theme-colors[luna-yellow];
+  border: 1px solid #theme-colors[luna-yellow];
+  border-radius: 0.25rem;
+  font-weight: 600;
+  transition: ease-in-out 150ms;
+}
+.btn-luna-download:hover {
+  background: #theme-colors[luna-yellow];
+  color: #theme-colors[luna];
+}
+// Code Sections
+div.code {
+  width: fit-content;
+  height: fit-content;
+  padding-inline: 1.25rem;
+  padding-block: 0.75rem;
+  margin-block: 0.25rem;
+  background: #gray[100];
+  border: 1px solid transparent;
+  border-radius: 12px;
+}
+div.code .term {
+  font-weight: 700;
+  color: #blue[800];
+}
+// Heading Elements
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.25rem;
+}
+h1, .h1 { font-size: 2.5rem; font-weight: 600; }
+h2, .h2 { font-size: 2rem; }
+h3, .h3 { font-size: 1.75rem; }
+h4, .h4 { font-size: 1.5rem; }
+h5, .h5 { font-size: 1.25rem; }
+h6, .h6 { font-size: 1rem; }
+// Font Sizes
+.sm { font-size: #font-size[sm]; }
+.md { font-size: #font-size[md]; }
+.lg { font-size: #font-size[lg]; }
+.xl { font-size: #font-size[xl]; }
+.xxl { font-size: #font-size[xxl]; }
+// Specific
+body {
+  background: linear-gradient(165deg, rgba(224,216,255,0.15) 50%, rgba(255,255,255,1) 50%);
+  background-repeat: no-repeat;
+}
+main.luna {
+  .flex;
+  .flex-col;
+  .justify-content-center;
+  .align-items-center;
+  height: calc(70vh - 65px);
+}
+p.luna { font-weight: 800; font-size: 3.5rem; }
+img.moon {
+  width: 10rem;
+  height: 10rem;
+}
+main div { padding-block: 0.5rem; }
