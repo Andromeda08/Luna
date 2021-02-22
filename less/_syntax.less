@@ -1,12 +1,28 @@
-/* Luna Syntax Highlighter */
+/*
+ * Luna Front-end Framework
+ ~ Syntax Highlighting
+ */
 @import '_colors';
+#term() {
+  key: #blue[900];
+  txt: #gray[500];
+}
+.term {
+  font-weight: 700;
+  color: #term[key];
+}
+.term-text {
+  color: #term[txt];
+}
 #html() {
   tag: #blue[900];
   tag-name: #gray[500];
   attr-clr: #red[400];
   attr-val: #purple[400];
+  dth5: #purple[300];
 }
 .tag { color: #html[tag]; }
 .tag-name { color: #html[tag-name]; }
 .attr { color: #html[attr-clr]; }
 .attr-value { color: #html[attr-val]; }
+.dth5 { color: #html[dth5]; }

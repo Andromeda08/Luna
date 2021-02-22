@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Luna front-end CSS framework">
+    <meta name="author" content="anromeda08">
+    <meta name="theme-color" content="#6752b3">
+
+    <link rel="icon" href="../assets/moon.png" type="image/png">
+    <link rel="apple-touch-icon" href="../assets/apple-touch-logo.png">
+
+    <link rel="stylesheet" href="../less/luna.css">
+    <title>Luna · Front-end Framework</title>
+</head>
+<body class='docs'>
+  <header class='navbar flex-nowrap luna-navbar'>
+    <nav class='nav-container-p8'>
+      <a class='navbar-logo' aria-label='Luna' href='#'>
+        <img src='../assets/moon.png' alt='moon' />
+      </a>
+    <div class='navbar-collapse'>
+      <ul class='navbar-nav flex-row flex-wrap'>
+        <li class='nav-item'>
+          <a class='nav-link' href='../index.html'>Home</a>
+        </li>
+        <li class='nav-item'>
+          <a class='nav-link active' href='#'>Docs</a>
+        </li>
+        <li class='nav-item'>
+            <a class='nav-link' href='../examples.html'>Examples</a>
+        </li>
+        <li class='nav-item'>
+          <a class='nav-link' href='#'>About</a>
+        </li>
+      </ul>
+      <ul class='navbar-nav flex-row flex-wrap ma-l-a'>
+        <li class='nav-item'>
+          <a href="https://github.com/Andromeda08/Luna" class="nav-link" target='_blank'><i class='fa fa-github' aria-hidden='true'></i></a>
+        </li>
+      </ul>
+      <a class='btn btn-luna-download ma-l-sm' href='#'>
+        Download
+      </a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+     <div class='docs-container'>
+        <ul class='docs-sidebar'>
+          <li class='docs-item'>
+            <button class='docs-item-category' onclick="openDocs('gs')"><i class='fa fa-chevron-right'></i> Getting Started</button>
+            <ul class='docs-sidebar-submenu docs-hide' id='gs'>
+              <li><a href='docs.html#introduction'>Introduction</a></li>
+              <li><a href='docs.html#quickstart'>Quick Start</a></li>
+              <li><a href='docs.html#usingluna'>Using Luna</a></li>
+              <li><a href='docs.html#important'>Globals</a></li>
+            </ul>
+          </li>
+
+          <li class='docs-item'>
+            <button class='docs-item-category' onclick="openDocs('features')"><i class='fa fa-chevron-right'></i> Features</button>
+            <ul class='docs-sidebar-submenu docs-hide' id='features'>
+              <li><a href='features.html#'>Customizing</a></li>
+              <li><a href='features.html#'>Typography</a></li>
+              <li><a href='features.html#'>Utilities</a></li>
+              <li><a href='features.html#'>Color Palette</a></li>
+              <li><a href='features.html#'>Documentation</a></li>
+            </ul>
+          </li>
+
+          <li class='docs-item'>
+            <button class='docs-item-category' onclick="openDocs('components')"><i class='fa fa-chevron-right'></i> Components</button>
+            <ul class='docs-sidebar-submenu docs-hide docs-show' id='components'>
+              <li><a href='#navigation'>Navigation</a></li>
+              <li><a href='#buttons'>Buttons</a></li>
+              <li><a href='#badges'>Badges</a></li>
+              <li><a href='#formelements'>Form Elements</a></li>
+            </ul>
+          </li>
+
+          <li class='docs-item'>
+            <button class='docs-item-category' onclick="openDocs('layout')"><i class='fa fa-chevron-right'></i> Layout</button>
+            <ul class='docs-sidebar-submenu docs-hide' id='layout'>
+              <li><a href='layout.html#'>Flex</a></li>
+            </ul>
+          </li>
+
+        </ul>
+
+      <section class='docs-content'>
+        <div class="container-p2">
+          <div id='components'>
+            <h1>Components</h1>
+            <p class='muted'>Luna features a variety of components that are easily customizable.</p>
+          </div>
+          <div id='navigation'>
+            <h2>Navigation</h2>
+            <p class='muted'>
+              Currently only the navigation bar you can see at the top of the page exists currently.<br>
+              The navigation bar utilizes flexbox to place its contained elements around.
+            </p>
+          </div>
+          <div id='buttons'>
+            <h2>Buttons</h2>
+            <div class='flex flex-col'>
+              <p class='muted'>You can select from a few styled with css selectors.</p>
+              <div class='docs-examples'>
+                <a class='btn btn-primary'>Primary</a>
+                <a class='btn btn-secondary'>Secondary</a>
+                <a class='btn btn-light'>Light</a>
+                <a class='btn btn-dark'>Dark</a>
+              </div>
+              <p class='muted'>You can scale the buttons with extra selectors.<br>Default size: btn-md</p>
+              <div class='docs-examples'>
+                <a class='btn btn-primary btn-sm'>btn-sm</a>
+                <a class='btn btn-secondary'>btn-md</a>
+                <a class='btn btn-light btn-lg'>btn-lg</a>
+                <a class='btn btn-dark btn-xl'>btn-xl</a>
+              </div>
+            </div>
+          </div>
+          <div id='badges'>
+            <h2>Badges</h2>
+            <div class='flex flex-col'>
+              <p class='muted'>You can select from a few styled with css selectors.</p>
+              <div class='docs-examples'>
+                <span class='badge bg-primary'>Primary</span>
+                <span class='badge bg-secondary'>Secondary</span>
+                <span class='badge bg-light'>Light</span>
+                <span class='badge bg-dark'>Dark</span>
+                <span class='badge bg-warning'>Warning</span>
+                <span class='badge bg-success'>Success</span>
+                <span class='badge bg-danger'>Danger</span>
+                <span class='badge bg-primary'>1</span>
+              </div>
+              <p class='muted'>You can scale the buttons with extra selectors.</p>
+              <div class='docs-examples'>
+                <span class='badge pill bg-primary'>Primary</span>
+                <span class='badge pill bg-secondary'>Secondary</span>
+                <span class='badge pill bg-light'>Light</span>
+                <span class='badge pill bg-dark'>Dark</span>
+                <span class='badge pill bg-warning'>Warning</span>
+                <span class='badge pill bg-success'>Success</span>
+                <span class='badge pill bg-danger'>Danger</span>
+                <span class='badge pill bg-primary'>2</span>
+              </div>
+            </div>
+          <div id='formelements'>
+            <h2>Form Elements</h2>
+            <p class='muted'>Todo.</p>
+            <div class='docs-examples'>
+              <input type='text' placeholder='email@example.com'>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container-p8 flex flex-col">
+      <ul>
+        <li><a href="https://github.com/Andromeda08/Luna" class="nav-link" target='_blank'>Github</a></li>
+        <li><a href='#'>Docs</a></li>
+        <li><a href='examples.html'>Examples</a></li>
+        <li><a href='#'>About</a></li>
+      </ul>
+      <div>
+        <p>Designed and developed by
+          <a href='htttps://www.github.com/Andromeda08' class='no-decoration' target='_blank'>Andromeda</a>
+        </p>
+        <p>Currently <b>v0.1.0</b></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src='../javascript/docs.js'></script>
+</body>
+</html>

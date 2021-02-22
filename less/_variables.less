@@ -1,0 +1,25 @@
+/*
+ * Luna Front-end Framework
+ ~ Default theme Variables
+ */
+@import '_colors';
+// Theme colors
+#luna-colors() {
+  luna: #6752b3;
+  luna-darker: #463879;
+  luna-yellow: #f6e06e;
+}
+#theme-colors() {
+  primary: #luna-colors[luna];
+  primary-darker: #luna-colors[luna-darker];
+  secondary: #gray[400];
+  secondary-darker: #gray[600];
+  accent: #luna-colors[luna-yellow];
+  light: #gray[200];
+  light-darker: #gray[400];
+  dark: #gray[900];
+  dark-lighter: #gray[700];
+  success: #emerald[400];
+  warning: #amber[400];
+  danger: #red[400];
+}
