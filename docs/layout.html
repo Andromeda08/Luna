@@ -33,14 +33,12 @@
           <a class='nav-link' href='#'>About</a>
         </li>
       </ul>
-      <ul class='navbar-nav flex-row flex-wrap ma-l-a'>
+      <ul class='navbar-nav flex-row flex-wrap ml-a'>
         <li class='nav-item'>
           <a href="https://github.com/Andromeda08/Luna" class="nav-link" target='_blank'><i class='fa fa-github' aria-hidden='true'></i></a>
         </li>
+        <a class='btn btn-luna-download ml-sm' href='#'>Download</a>
       </ul>
-      <a class='btn btn-luna-download ma-l-sm' href='#'>
-        Download
-      </a>
       </div>
     </nav>
   </header>
@@ -59,23 +57,31 @@
           </li>
 
           <li class='docs-item'>
-            <button class='docs-item-category' onclick="openDocs('features', 'li2')"><i class='fa fa-chevron-right li2'></i> Features</button>
-            <ul class='docs-sidebar-submenu docs-hide' id='features'>
-              <li><a href='features.html#'>Customizing</a></li>
-              <li><a href='features.html#'>Typography</a></li>
-              <li><a href='features.html#'>Utilities</a></li>
-              <li><a href='features.html#'>Color Palette</a></li>
-              <li><a href='features.html#'>Documentation</a></li>
+            <button class='docs-item-category' onclick="openDocs('utilities', 'li2')"><i class='fa fa-chevron-right li2'></i> Utilities</button>
+            <ul class='docs-sidebar-submenu docs-hide' id='utilities'>
+              <li><a href='utilities.html#'>Customizing</a></li>
+              <li><a href='utilities.html#'>Typography</a></li>
+              <li><a href='utilities.html#'>Color Palette</a></li>
+              <li><a href='utilities.html#'>Documentation</a></li>
             </ul>
           </li>
 
           <li class='docs-item'>
             <button class='docs-item-category' onclick="openDocs('components', 'li3')"><i class='fa fa-chevron-right li3'></i> Components</button>
             <ul class='docs-sidebar-submenu docs-hide' id='components'>
-              <li><a href='components.html#navigation'>Navigation</a></li>
-              <li><a href='components.html#buttons'>Buttons</a></li>
+              <li><a href='components.html#alerts'>Alerts</a></li>
+              <li><a href='components.html#avatars'>Avatars</a></li>
               <li><a href='components.html#badges'>Badges</a></li>
-              <li><a href='components.html#formelements'>Form Elements</a></li>
+              <li><a href='components.html#box'>Box</a></li>
+              <li><a href='components.html#breadcrumbs'>Breadcrumbs</a></li>
+              <li><a href='components.html#buttons'>Buttons</a></li>
+              <li><a href='components.html#formelements'>Forms</a></li>
+              <li><a href='components.html#header'>Header</a></li>
+              <li><a href='components.html#labels'>Labels</a></li>
+              <li><a href='components.html#loaders'>Loaders</a></li>
+              <li><a href='components.html#subhead'>Subhead</a></li>
+              <li><a href='components.html#timeline'>Timeline</a></li>
+              <li><a href='components.html#toast'>Toast</a></li>
             </ul>
           </li>
 
@@ -91,12 +97,12 @@
         <div class="container-p2">
           <div id='introduction'>
             <h1>Layouts</h1>
-            <p class='muted'>
+            <p>
               Luna contains a few layout options by default which you can combine to achieve
               different results.
             </p>
             <h2>Flex Grid</h2>
-            <p class='muted'>Provides a flexbox based customizable layout.</p>
+            <p>Provides a flexbox based customizable layout.</p>
             <div class="docs-examples">
               <div class='flex-grid flex-g1'>
                 <div class='fg-row flex-center'><p class='h2'>Row 1</p></div>
@@ -142,11 +148,12 @@
         <p>Designed and developed by
           <a href='htttps://www.github.com/Andromeda08' class='no-decoration' target='_blank'>Andromeda</a>
         </p>
-        <p>Currently <b>v0.1.2</b></p>
+        <p>Currently <span class="version"></span></p>
       </div>
     </div>
   </footer>
 
+  <script src='../javascript/luna.js'></script>
   <script src='js/docs.js'></script>
 </body>
 </html>
