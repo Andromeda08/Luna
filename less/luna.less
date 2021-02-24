@@ -131,6 +131,7 @@ input:focus, textarea:focus, select:focus{
 // Text Classes
 .muted { color: #gray[500]; }
 .no-decoration { text-decoration: none !important;}
+.bold { font-weight: 800; }
 .text-center { text-align: center; }
 .lh-sm { line-height: #line-height[sm]; }
 .lh-md { line-height: #line-height[md]; }
@@ -142,10 +143,12 @@ input:focus, textarea:focus, select:focus{
 .bg-accent { background-color: #theme-colors[accent]; }
 .bg-light { background-color: #theme-colors[light]; }
 .bg-dark { background-color: #theme-colors[dark]; }
-.bg-success { background-color: #theme-colors[success]; }
-.bg-warning { background-color: #theme-colors[warning]; }
-.bg-danger { background-color: #theme-colors[danger]; }
+.bg-success { background-color: #alerts[success-bg]; }
+.bg-warning { background-color: #alerts[warning-bg]; }
+.bg-danger { background-color: #alerts[danger-bg]; }
+.bg-info { background-color: #alerts[info-bg]; }
 // Navigation
+header.navbar { height: 65px; }
 .luna-navbar {
   background: #theme-colors[primary];
 }
@@ -367,67 +370,114 @@ footer a {
   border: 1px solid transparent;
   border-radius: 0.25rem;
   padding: 0.35rem 0.75rem;
+  font-weight: 500;
 }
-.btn-sm { padding: 0.1rem 0.2rem; }
-.btn-md { padding: 0.35rem 0.75rem; }
-.btn-lg {
+.btn.btn-sm { padding: 0.1rem 0.2rem; }
+.btn.btn-md { padding: 0.35rem 0.75rem; }
+.btn.btn-lg {
   padding: 0.5rem 1rem;
   font-size: #font-size[lg];
 }
-.btn-xl {
-  padding: 0.75rem 1.35rem;
+.btn.btn-xl {
+  padding: 0.65rem 1.35rem;
   font-size: #font-size[lg];
 }
-.btn-primary {
+.btn.btn-xxl {
+  padding: 0.75rem 1.5rem;
+  font-size: #font-size[lg];
+}
+.btn.btn-primary {
   color: white;
   background: #theme-colors[primary];
-  border: 1px solid #theme-colors[primary];
-  font-weight: 500;
+  border-color: #theme-colors[primary];
 }
-.btn-primary:hover {
+.btn.btn-primary:hover {
   transition: ease-in-out 150ms;
   background: #theme-colors[primary-darker];
 }
-.btn-secondary {
-  color: #gray[500];
-  border: 1px solid #theme-colors[secondary];
-  font-weight: 500;
+.btn.btn-secondary {
+  color: #gray[100];
+  background: #gray[400];
+  border-color: #gray[400];
 }
-.btn-secondary:hover {
+.btn.btn-secondary:hover {
   transition: ease-in-out 150ms;
-  background: #theme-colors[secondary];
+  background: #gray[500];
   color: #fff;
 }
-.btn-light {
+.btn.btn-light {
   color: #theme-colors[dark];
   background: #theme-colors[light];
-  border: 1px solid #theme-colors[light];
-  font-weight: 500;
+  border-color: #theme-colors[light];
 }
-.btn-light:hover {
+.btn.btn-light:hover {
   transition: ease-in-out 150ms;
   background: #theme-colors[light-darker];
   color: #theme-colors[light];
 }
-.btn-dark {
+.btn.btn-dark {
   color: #ffffff;
   background: #theme-colors[dark];
-  border: 1px solid #theme-colors[dark];
-  font-weight: 500;
+  border-color: #theme-colors[dark];
 }
-.btn-dark:hover {
+.btn.btn-dark:hover {
   transition: ease-in-out 150ms;
   background: #theme-colors[dark-lighter];
 }
-.btn-primary-outline {
-  border-color: #theme-colors[primary];
-  color: #theme-colors[primary];
+.btn.btn-success {
+  color: #alerts[success-tx];
+  background: #alerts[success-bg];
+  border-color: #alerts[success-tx];
+}
+.btn.btn-success:hover {
+  transition: ease-in-out 150ms;
+  background: #alerts[success-darker];
+}
+.btn.btn-warning {
+  color: #alerts[warning-tx];
+  background: #alerts[warning-bg];
+  border-color: #alerts[warning-bg];
+}
+.btn.btn-warning:hover {
+  transition: ease-in-out 150ms;
+  background: #alerts[warning-darker];
+}
+.btn.btn-danger {
+  color: #alerts[danger-tx];
+  background: #alerts[danger-bg];
+  border-color: #alerts[danger-bg];
+}
+.btn.btn-danger:hover {
+  transition: ease-in-out 150ms;
+  background: #alerts[danger-darker];
+}
+.btn.btn-info {
+  color: #alerts[info-tx];
+  background: #alerts[info-bg];
+  border-color: #alerts[info-bg];
+}
+.btn.btn-info:hover {
+  transition: ease-in-out 150ms;
+  background: #alerts[info-darker];
+}
+.btn.btn-secondary-outlined {
+  color: #gray[400];
+  border-color: #gray[400];
   background: transparent;
 }
-.btn-primary-outline:hover {
+.btn.btn-secondary-outlined:hover {
   transition: ease-in-out 150ms;
-  background: #theme-colors[primary];
+  background: #theme-colors[secondary];
   color: #fff;
+}
+.btn.btn-dashed{
+  border-style: dashed;
+}
+.btn.btn-disabled {
+  width: calc(width - 4px);
+  pointer-events: none;
+  box-shadow: inset 5px 5px 20px 0px rgba(0,0,0,0.25);
+  color: #e5e5e5aa;
 }
 // Badges
 .badge {
@@ -489,6 +539,7 @@ footer a {
   width: fit-content;
 }
 .avatar-group > * { margin: 0; padding: 0; position: relative; }
+.avatar-group .avatar:first-of-type,
 .avatar-group .avatar-circle:first-of-type {
   z-index: 3;
 }
@@ -497,6 +548,7 @@ footer a {
   z-index: 2;
   margin-right: -28px;
 }
+.avatar-group .avatar:last-of-type,
 .avatar-group .avatar-circle:last-of-type {
   z-index: 1;
   margin-right: 0;
@@ -528,6 +580,42 @@ footer a {
 .breadcrumbs .breadcrumb-item:last-of-type::after {
   content: '';
   padding: 0;
+}
+// Alerts
+.alert {
+  max-width: 50%;
+  max-height: 65px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  overflow-x: hidden;
+  margin: 0.25rem;
+  border-radius: 0.25rem;
+  padding-block: 0.75rem;
+  padding-inline: 1rem;
+  background: #alerts[info-bg];
+  color: #alerts[info-tx];
+  transition: all ease-in-out 250ms;
+}
+.alert.danger {
+  background: #alerts[danger-bg];
+  color: #alerts[danger-tx];
+}
+.alert.warning {
+  background: #alerts[warning-bg];
+  color: #alerts[warning-tx];
+}
+.alert.success {
+  background: #alerts[success-bg];
+  color: #alerts[success-tx];
+}
+.alert.info {
+  background: #alerts[info-bg];
+  color: #alerts[info-tx];
+}
+.docs-examples .alert {
+  max-width: 100%;
+  width: 100%;
 }
 // Input
 input {
@@ -578,6 +666,11 @@ h6, .h6 { font-size: 1rem; }
 .lg { font-size: #font-size[lg]; }
 .xl { font-size: #font-size[xl]; }
 .xxl { font-size: #font-size[xxl]; }
+// Flags
+.flag {
+  width: auto;
+  height: 32px;
+}
 // Clip paths
 .circle-clip { clip-path: circle(50% at 50% 50%); }
 // Luna Theme

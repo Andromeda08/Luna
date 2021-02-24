@@ -75,7 +75,7 @@
               <li><a href='#box'>Box</a></li>
               <li><a href='#breadcrumbs'>Breadcrumbs</a></li>
               <li><a href='#buttons'>Buttons</a></li>
-              <li><a href='#formelements'>Forms</a></li>
+              <li><a href='#forms'>Forms</a></li>
               <li><a href='#header'>Header</a></li>
               <li><a href='#labels'>Labels</a></li>
               <li><a href='#loaders'>Loaders</a></li>
@@ -103,7 +103,32 @@
 
           <div id='alerts'>
             <h2>Alerts</h2>
-            <p class='muted'>Todo.</p>
+            <p>Alerts are dismissable by default and require Javascript to function properly. Alerts can't be dismissed if you
+              remove the <code class="inline-code">.a-close</code> class from the last span.</p>
+            <p>These are the default alert colors, you can easily create your own alert by creating a class such as
+              <code class="inline-code">.alert.secondary</code>.</p>
+            <div class="docs-examples flex flex-col">
+              <div class="alert success">
+                <p><span class="bold">Success</span> level dismissable alert.</p>
+                <span class="a-close ml-a"><i class="fa fa-times"></i></span>
+              </div>
+              <div class="alert warning">
+                <p><span class="bold">Warning</span> level dismissable alert.</p>
+                <span class="a-close ml-a"><i class="fa fa-times"></i></span>
+              </div>
+              <div class="alert danger">
+                <p><span class="bold">Danger</span> level dismissable alert.</p>
+                <span class="a-close ml-a"><i class="fa fa-times"></i></span>
+              </div>
+              <div class="alert info">
+                <p><span class="bold">Info</span> level dismissable alert, and I'm not dismissable.</p>
+                <span class="ml-a"><i class="fa fa-chevron-left"></i></span>
+              </div>
+              <div class="alert secondary">
+                <p>New alert type made with a custom selector.</p>
+                <span class="a-close ml-a"><i class="fa fa-times"></i></span>
+              </div>
+            </div>
           </div>
 
           <div id='avatars'>
@@ -139,6 +164,11 @@
             <p>Currently supports up to 3 avatars. On hover the avatars are spread out if using the <code class="inline-code">.ag-animated</code> class.</p>
             <div class="docs-examples">
               <div class="avatar-group ag-animated">
+                <img src="../assets/avatar.jpg" class='avatar avatar'/>
+                <img src="../assets/avatar2.jpg" class='avatar avatar'/>
+                <img src="../assets/githubpfp.jpg" class='avatar avatar'/>
+              </div>
+              <div class="avatar-group ag-animated">
                 <img src="../assets/avatar.jpg" class='avatar-circle avatar-5'/>
                 <img src="../assets/avatar2.jpg" class='avatar-circle avatar-5'/>
                 <img src="../assets/githubpfp.jpg" class='avatar-circle avatar-5'/>
@@ -158,7 +188,7 @@
                 <span class='badge bg-warning'>Warning</span>
                 <span class='badge bg-success'>Success</span>
                 <span class='badge bg-danger'>Danger</span>
-                <span class='badge bg-primary'>1</span>
+                <span class='badge bg-info'>Info</span>
               </div>
               <p>You can scale the buttons with extra selectors.</p>
               <div class='docs-examples'>
@@ -169,7 +199,7 @@
                 <span class='badge pill bg-warning'>Warning</span>
                 <span class='badge pill bg-success'>Success</span>
                 <span class='badge pill bg-danger'>Danger</span>
-                <span class='badge pill bg-primary'>2</span>
+                <span class='badge pill bg-info'>Info</span>
               </div>
             </div>
           </div>
@@ -197,19 +227,35 @@
           <div id='buttons'>
             <h2>Buttons</h2>
             <div class='flex flex-col'>
-              <p>You can select from a few styled with css selectors.</p>
+              <p>You can style your buttons using the default styles, or you can create a custom style.
+                All buttons are animated by default, to disable animations use the <code class="inline-code">.no-anim</code> class.
+              </p>
               <div class='docs-examples'>
                 <a class='btn btn-primary'>Primary</a>
                 <a class='btn btn-secondary'>Secondary</a>
                 <a class='btn btn-light'>Light</a>
                 <a class='btn btn-dark'>Dark</a>
+                <a class='btn btn-success'>Success</a>
+                <a class='btn btn-warning'>Warning</a>
+                <a class='btn btn-danger'>Danger</a>
+                <a class='btn btn-info'>Info</a>
               </div>
-              <p>You can scale the buttons with extra selectors.<br>Default size: btn-md</p>
+              <h4>Button Sizes</h4>
+              <p>Change the size of a button by adding a sizing class: <code class="inline-code">.btn-[sm, md, lg, xl, xxl]</code>.</p>
               <div class='docs-examples'>
-                <a class='btn btn-primary btn-sm'>btn-sm</a>
-                <a class='btn btn-secondary'>btn-md</a>
-                <a class='btn btn-light btn-lg'>btn-lg</a>
-                <a class='btn btn-dark btn-xl'>btn-xl</a>
+                <a class='btn btn-primary btn-sm'>Small</a>
+                <a class='btn btn-secondary'>Default</a>
+                <a class='btn btn-light btn-lg'>Large</a>
+                <a class='btn btn-dark btn-xl'>XLarge</a>
+                <a class='btn btn-info btn-xxl'>XXLarge</a>
+              </div>
+              <h4>Button Styles</h4>
+              <p>Buttons by default have a background color, to make it outline only use the class <code class="inline-code">.btn-[type]-outlined</code> instead.
+                You can set a button to be disable with the <code class="inline-code">.btn-disabled</code> class.</p>
+              <div class='docs-examples'>
+                <a class='btn btn-primary'>Default</a>
+                <a class='btn btn-secondary-outlined'>Outlined</a>
+                <a class='btn btn-danger btn-disabled'>Disabled</a>
               </div>
             </div>
           </div>
@@ -288,7 +334,7 @@
                     <li class='nav-item'><a class='nav-link' href='#'>Link</a></li>
                   </ul>
                   <ul class='navbar-nav flex-row flex-wrap ml-a'>
-                    <a href="" class="btn btn-primary">Sign In</a>
+                    <img src='../assets/avatar.jpg' class='avatar-circle' />
                   </ul>
                 </div>
               </div>

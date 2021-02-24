@@ -1,3 +1,8 @@
+/*
+ /*
+ * Luna Front-end Framework
+ ~ Included color palette from Tailwind 2.0
+ */
 .border-big {
   border-radius: 0.25rem;
   background: #e4e4e7;
@@ -22,4 +27,8 @@
 }
 .demo-rounded {
   border-radius: 0.25rem;
+}
+.alert.secondary {
+  background: #71717a;
+  color: #e4e4e7;
 }

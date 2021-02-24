@@ -1,4 +1,9 @@
 less/fonts/*
+assets/psd
+assets/flags
 assets/psd/*
+assets/flags/*
+assets/credits.md
 changelog.md
 test/*
+docs/img/*
